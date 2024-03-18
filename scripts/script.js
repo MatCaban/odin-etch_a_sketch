@@ -42,10 +42,13 @@ const createSquares = () => {
     const boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
         box.addEventListener("mouseover", (e) => {
-            const redColor = Math.floor(Math.random() * 255);
-            const greenColor = Math.floor(Math.random() * 255);
-            const blueColor = Math.floor(Math.random() * 255);
-            e.target.style.backgroundColor = `rgb(${redColor}, ${greenColor}, ${blueColor})`;
+            if (e.target.style.backgroundColor === "") {
+                const redColor = Math.floor(Math.random() * 255);
+                const greenColor = Math.floor(Math.random() * 255);
+                const blueColor = Math.floor(Math.random() * 255);
+                e.target.style.backgroundColor = `rgb(${redColor}, ${greenColor}, ${blueColor})`;
+            }
+
         })
     });
 
