@@ -19,10 +19,18 @@ const createGrid = numOfSquares => {
 //ask user to input number of boxex per row 
 //put that value squaret as argument for create grid
 const createSquares = () => {
-    const message = prompt("Number of squares per side?");
-    console.log(message);
-    createGrid(message * message);
+    let message;
+    while (true) {
+        message = prompt("Number of squares per side?");
+        console.log(message);
+        if(message <= 100 && Number(message)){
+            break;
+        } else {
+            alert("Please enter a number less than or equal to 100.");
+        }
+    }
 
+    createGrid(message * message);
     const boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
         box.addEventListener("mouseover", (e) => {
