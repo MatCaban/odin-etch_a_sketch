@@ -17,13 +17,14 @@ const createGrid = numOfSquares => {
     }
 }
 //ask user to input number of boxex per row 
-//put that value squaret as argument for create grid
 const createSquares = () => {
     let message;
     while (true) {
         message = prompt("Number of squares per side?");
         console.log(message);
+
         // after validate user input clear grid
+
         if (message <= 100 && Number(message)) {
             const existingBoxes = document.querySelectorAll(".box");
             if (existingBoxes.length !== 0) {
@@ -31,7 +32,6 @@ const createSquares = () => {
                     box.remove();
                 })
             }
-
             break;
         } else {
             alert("Please enter a number less than or equal to 100.");
@@ -40,15 +40,19 @@ const createSquares = () => {
 
     createGrid(message * message);
     const boxes = document.querySelectorAll(".box");
+    // Add a mouseover event listener to each box
     boxes.forEach(box => {
         box.addEventListener("mouseover", (e) => {
+            // If the box has no background color
             if (e.target.style.backgroundColor === "") {
+                // Generate random RGB values
                 const redColor = Math.floor(Math.random() * 255);
                 const greenColor = Math.floor(Math.random() * 255);
                 const blueColor = Math.floor(Math.random() * 255);
+
+                // Set the background color of the box to the random RGB color
                 e.target.style.backgroundColor = `rgb(${redColor}, ${greenColor}, ${blueColor})`;
             }
-
         })
     });
 
