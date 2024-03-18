@@ -23,7 +23,12 @@ const createSquares = () => {
     while (true) {
         message = prompt("Number of squares per side?");
         console.log(message);
+        // after validate user input clear grid
         if(message <= 100 && Number(message)){
+            const existingBoxes = querySelectorAll(".box");
+            existingBoxes.forEach(box => {
+                box.remove();
+            })
             break;
         } else {
             alert("Please enter a number less than or equal to 100.");
