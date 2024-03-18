@@ -39,10 +39,14 @@ const createSquares = () => {
     }
 
     createGrid(message * message);
+    const redColor = Math.floor(Math.random()*255);
+    const greenColor = Math.floor(Math.random()*255);
+    const blueColor = Math.floor(Math.random()*255);
     const boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
         box.addEventListener("mouseover", (e) => {
-            e.target.classList.add("background");
+            e.target.style.backgroundColor = `rgb(${redColor}, ${greenColor}, ${blueColor})`;
+            
         })
     });
 

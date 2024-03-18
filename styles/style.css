@@ -25,9 +25,7 @@ body {
     width: calc((960px - 16px) / 16);
     height: calc((960px - 16px) / 16);
 }
-.background {
-    background-color: blue;
-}
+
 
 button {
     background-color: blue;
