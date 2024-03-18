@@ -13,3 +13,8 @@ boxes.forEach(box => {
     })
 });
 
+const button = document.querySelector("button");
+button.addEventListener("click", (e)=>{
+    const message = prompt("message");
+    console.log(message);
+})
