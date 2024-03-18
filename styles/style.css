@@ -1,0 +1,18 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Add your custom styles below this line */
+
+.box {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
