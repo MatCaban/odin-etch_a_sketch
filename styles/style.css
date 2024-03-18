@@ -23,3 +23,6 @@ body {
     width: calc((100vw - 16px) / 16);
     height: calc((100vw - 16px) / 16);
 }
+.background {
+    background-color: blue;
+}
