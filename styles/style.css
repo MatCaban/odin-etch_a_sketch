@@ -19,7 +19,7 @@ body {
 }
 /* -16px for borders, grid will fit better */
 .box {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     width: calc((100vw - 16px) / 16);
     height: calc((100vw - 16px) / 16);
 }
