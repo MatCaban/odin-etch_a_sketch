@@ -25,10 +25,13 @@ const createSquares = () => {
         console.log(message);
         // after validate user input clear grid
         if(message <= 100 && Number(message)){
-            const existingBoxes = querySelectorAll(".box");
-            existingBoxes.forEach(box => {
-                box.remove();
-            })
+            const existingBoxes = document.querySelectorAll(".box");
+            if(existingBoxes.length !== 0){
+                existingBoxes.forEach(box => {
+                    box.remove();
+                })
+            }
+            
             break;
         } else {
             alert("Please enter a number less than or equal to 100.");
