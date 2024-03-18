@@ -12,3 +12,4 @@ boxes.forEach(box => {
         e.target.classList.add("background");
     })
 });
+
